@@ -1,6 +1,6 @@
 <?php
 /**
- * Kasha Pair Products Index File.
+ * Football 256 plugin  Index File.
  * @author Kiberu Sharif <sharif.kiberu@kasha.co>
  * 
  */

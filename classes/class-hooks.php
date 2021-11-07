@@ -24,6 +24,7 @@ if ( ! class_exists( 'Football256_Hooks' ) ) {
             // Create class instances
             $this->action_hooks();
             $this->filter_hooks();
+            $this->add_shortcodes();
 
         }
 
@@ -33,7 +34,7 @@ if ( ! class_exists( 'Football256_Hooks' ) ) {
          * @return void
          */
         public function includes() {
-            
+            require_once( FOOTBALL_256_PATH . 'classes/class-shortcodes.php' );
         }
 
         /**
@@ -52,6 +53,10 @@ if ( ! class_exists( 'Football256_Hooks' ) ) {
          */
         public function filter_hooks() {
             
+        }
+
+        public function add_shortcodes() {
+            add_shortcode( 'date-today', array( new Football256_Shortcodes , 'get_date_today') ); 
         }
     }    
 
